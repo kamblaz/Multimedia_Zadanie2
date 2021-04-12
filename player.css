@@ -11,6 +11,14 @@
     background-color: goldenrod;
 }
 
+.controls {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: gray;
+    margin-left: 100px;
+    width: 80vw;
+}
+
 .movie {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -23,7 +31,6 @@
 
 .add_movie_form {
     padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 .form_item {
