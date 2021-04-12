@@ -63,3 +63,7 @@ img {
 input {
     width: 30vw;
 }
+
+progress {
+    width: 100%;
+}
