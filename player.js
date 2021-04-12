@@ -114,5 +114,10 @@ function changePosition() {
     var input = document.getElementById("position");
     var progress_bar = document.getElementById("progress_position");
     var player = document.getElementById("video");
+    var currentTime = player.currentTime;
+    var duration = player.duration;
+    if (input.value > 0)
+        player.currentTime = (input.value) / 100 * duration;
+    console.log(duration / input.value);
     progress_bar.value = input.value;
 }
