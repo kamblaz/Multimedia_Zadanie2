@@ -43,8 +43,8 @@
             <h2>Controls</h2>
             <div>
                 <label for="volume">Volume</label>
-                <input onchange="changeVolume()" type="range" id="volume" name="volume" min="0" max="100" value="0">
-                <progress id="progress_volume" value="0" max="100"></progress>
+                <input onchange="changeVolume()" type="range" id="volume" name="volume" min="0" max="100" value="100">
+                <progress id="progress_volume" value='100' max="100"></progress>
             </div>
             <br>
             <div>
@@ -54,7 +54,7 @@
             </div>
         </div>
         <div class="video_player">
-            <video id="video" muted autoplay controls width="720" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"></video>
+            <video id="video" autoplay controls width="720" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"></video>
         </div>
     </div>
     <script src='player.js'></script>

@@ -25,6 +25,7 @@
 
 function runVideo(link) {
     document.getElementById('video').setAttribute('src', link)
+    document.getElementById('video').muted = 0;
 }
 
 function getParamNames(func) {
@@ -104,11 +105,14 @@ function remove() {
 function changeVolume() {
     var input = document.getElementById("volume");
     var progress_bar = document.getElementById("progress_volume");
+    var player = document.getElementById("video");
+    player.volume = input.value / 100.0;
     progress_bar.value = input.value;
 }
 
 function changePosition() {
     var input = document.getElementById("position");
     var progress_bar = document.getElementById("progress_position");
+    var player = document.getElementById("video");
     progress_bar.value = input.value;
 }
