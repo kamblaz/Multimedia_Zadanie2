@@ -43,14 +43,14 @@
             <h2>Controls</h2>
             <div>
                 <label for="volume">Volume</label>
-                <input type="range" id="volume" name="volume" min="0" max="100" value="0">
+                <input onchange="changeVolume()" type="range" id="volume" name="volume" min="0" max="100" value="0">
                 <progress id="progress_volume" value="0" max="100"></progress>
             </div>
             <br>
             <div>
                 <label for="position">Position</label>
-                <input type="range" id="position" name="position" min="0" max="100" value="0">
-                <progress id="position_volume" value="0" max="100"></progress>
+                <input onchange="changePosition()" type="range" id="position" name="position" min="0" max="100" value="0">
+                <progress id="progress_position" value="0" max="100"></progress>
             </div>
         </div>
         <div class="video_player">

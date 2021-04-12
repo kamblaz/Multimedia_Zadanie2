@@ -100,3 +100,15 @@ function remove() {
         }
     }
 }
+
+function changeVolume() {
+    var input = document.getElementById("volume");
+    var progress_bar = document.getElementById("progress_volume");
+    progress_bar.value = input.value;
+}
+
+function changePosition() {
+    var input = document.getElementById("position");
+    var progress_bar = document.getElementById("progress_position");
+    progress_bar.value = input.value;
+}
