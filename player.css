@@ -55,6 +55,16 @@
     text-decoration: underline;
 }
 
+.theater {
+    -webkit-transform: scale(1.5, 1.5);
+    position: fixed;
+    left: 400px;
+    top: 100px;
+    border-right: 100% solid black;
+    border-left: 100% solid black;
+    margin: auto;
+}
+
 img {
     width: 20px;
     height: 20px;

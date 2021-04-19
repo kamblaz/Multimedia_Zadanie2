@@ -3,7 +3,7 @@
     const addMovieButton = document.querySelector('.add_movie_button');
     const newMovieTitle = document.querySelector('#movie_title');
     const newMovieUrl = document.querySelector('#movie_url');
-    const video = document.getElementById('video');
+    var video = document.getElementById('video');
 
 
     const createNewMovieElement = () => {
@@ -73,10 +73,6 @@ function myHandler(e) {
         current_video_index = 0;
     }
     $("#video")[0].load();
-    // console.log("Number of videos", lis.length)
-    // console.log("Current video index", current_video_index)
-    // console.log("Current video name", e.value)
-    // console.log("ended");
 }
 
 function moveUp() {
@@ -150,8 +146,16 @@ function maximize() {
 function wide() {
     div = document.getElementById('video_id');
     div.classList.remove('video_player');
-    video.style.width = vw(100);
-    video.style.height = vh(90);
+    //var screenProportion = window.screen.availWidth / window.screen.availHeight;
+    video.style.width = 2000;
+    video.style.height = 1000;
+    video.style.margin = 10;
+    console.log(screenProportion);
+}
+
+function restore() {
+    div = document.getElementById('video_id');
+    div.classList.add('video_player');
 }
 
 video.onvolumechange = function() {
