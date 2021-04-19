@@ -147,8 +147,8 @@ function wide() {
     div = document.getElementById('video_id');
     div.classList.remove('video_player');
     //var screenProportion = window.screen.availWidth / window.screen.availHeight;
-    video.style.width = 2000;
-    video.style.height = 1000;
+    video.style.width = 0.97 * window.screen.availWidth;
+    video.style.height = window.screen.availHeight;
     video.style.margin = 10;
     console.log(screenProportion);
 }
