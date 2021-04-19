@@ -119,6 +119,41 @@ function changePosition() {
     progress_bar.value = input.value;
 }
 
+function vh(v) {
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    return (v * h) / 100;
+}
+
+function vw(v) {
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    return (v * w) / 100;
+}
+
+function vmin(v) {
+    return Math.min(vh(v), vw(v));
+}
+
+function vmax(v) {
+    return Math.max(vh(v), vw(v));
+}
+
+function maximize() {
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) { /* Safari */
+        video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { /* IE11 */
+        video.msRequestFullscreen();
+    }
+}
+
+function wide() {
+    div = document.getElementById('video_id');
+    div.classList.remove('video_player');
+    video.style.width = vw(100);
+    video.style.height = vh(90);
+}
+
 video.onvolumechange = function() {
     var input = document.getElementById("volume");
     var progress_bar = document.getElementById("progress_volume");
