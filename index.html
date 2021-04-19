@@ -39,6 +39,9 @@
                 </div>
             </form>
         </div>
+        <div class="video_player">
+            <video id="video" autoplay controls width="720" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"></video>
+        </div>
         <div class="controls">
             <h2>Controls</h2>
             <div>
@@ -52,9 +55,6 @@
                 <input onchange="changePosition()" type="range" id="position" name="position" min="0" max="100" value="0">
                 <progress id="progress_position" value="0" max="100"></progress>
             </div>
-        </div>
-        <div class="video_player">
-            <video id="video" autoplay controls width="720" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"></video>
         </div>
     </div>
     <script src='player.js'></script>

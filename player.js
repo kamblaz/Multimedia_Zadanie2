@@ -3,6 +3,7 @@
     const addMovieButton = document.querySelector('.add_movie_button');
     const newMovieTitle = document.querySelector('#movie_title');
     const newMovieUrl = document.querySelector('#movie_url');
+    const video = document.getElementById('video');
 
 
     const createNewMovieElement = () => {
@@ -105,19 +106,31 @@ function remove() {
 function changeVolume() {
     var input = document.getElementById("volume");
     var progress_bar = document.getElementById("progress_volume");
-    var player = document.getElementById("video");
-    player.volume = input.value / 100.0;
+    video.volume = input.value / 100.0;
     progress_bar.value = input.value;
 }
 
 function changePosition() {
     var input = document.getElementById("position");
     var progress_bar = document.getElementById("progress_position");
-    var player = document.getElementById("video");
-    var currentTime = player.currentTime;
-    var duration = player.duration;
+    var duration = video.duration;
     if (input.value > 0)
-        player.currentTime = (input.value) / 100 * duration;
-    console.log(duration / input.value);
+        video.currentTime = (input.value) / 100 * duration;
     progress_bar.value = input.value;
 }
+
+video.onvolumechange = function() {
+    var input = document.getElementById("volume");
+    var progress_bar = document.getElementById("progress_volume");
+    input.value = video.volume * 100;
+    progress_bar.value = video.volume * 100;
+};
+
+video.ontimeupdate = function() {
+    var input = document.getElementById("position");
+    var progress_bar = document.getElementById("progress_position");
+    var duration = video.duration;
+    if (input.value > 0)
+        input.value = video.currentTime / duration * 100
+    progress_bar.value = input.value;
+};
